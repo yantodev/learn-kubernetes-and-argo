@@ -2,8 +2,7 @@ name: Build and Push Docker image
 
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
     paths:
       - hello-world/index.html
       - hello-world/deployment.yaml
