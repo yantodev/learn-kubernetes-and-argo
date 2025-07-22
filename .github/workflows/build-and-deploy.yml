@@ -5,9 +5,11 @@ on:
     branches:
       - master
     paths:
+      - hello-world/index.html
+      - hello-world/deployment.yaml
+      - hello-world/service.yaml
       - Dockerfile
-      - index.html
-      - deployment.yaml
+
 
 jobs:
   test:
