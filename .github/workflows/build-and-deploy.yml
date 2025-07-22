@@ -10,7 +10,6 @@ on:
       - hello-world/service.yaml
       - Dockerfile
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
