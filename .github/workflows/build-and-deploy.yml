@@ -2,12 +2,19 @@ name: Build and Push Docker image
 
 on:
   push:
+    branches:
+      - master
     paths:
       - Dockerfile
       - index.html
       - deployment.yaml
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello
+      run: echo "Hello from GitHub Actions"
   build:
     runs-on: ubuntu-latest
     steps:
@@ -22,8 +29,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t namamu/my-web:latest .
-        docker push namamu/my-web:latest
+        docker build -t yantodev/my-web:latest .
+        docker push yantodev/my-web:latest
 
     - name: Update deployment.yaml (optional)
       run: |
